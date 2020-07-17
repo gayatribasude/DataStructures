@@ -10,7 +10,12 @@ worse case=O(n^2)
 avg case=O(nlogn)
 
 therefore time complexity: theta(nlogn)
-space=O(n)
+
+spaceComplexity:(system stack)
+best case=O(logn)
+worse case=O(n)
+
+
 inPlace= yes
 stable= no
 

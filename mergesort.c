@@ -9,7 +9,10 @@ worse case=O(nlogn)
 avg case=O(nlogn)
 
 therefore time complexity: theta(nlogn)
-space=O(n)
+
+space=O(logn)+O(n) (stack and array)
+therefore space complexity: O(n)
+
 inPlace= no
 stable= yes
 
