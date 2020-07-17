@@ -14,7 +14,7 @@ The algorithm maintains two subarrays in a given array.
 avg case=O(n^2)
 space=O(1)
 inPlace= yes
-stable= yes
+stable= no
 
 */
 
