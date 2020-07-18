@@ -43,26 +43,7 @@ if __name__=='__main__':
 	print(l1)
 
 
-"""		
-APPLEs-MacBook-Air:ExamTime newmac$ python3 merge_sort_without_space.py
-enter size of list1:3
-enter size of list2:5
-enter 3 elements of list1:
-2
-4
-5
-enter 5 elements of list2:
-1
-3
-5
-7
-9
 
-
-1 2 3 
-4 5 5 7 9 
-
-"""
 
 	
 	
