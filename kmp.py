@@ -31,15 +31,11 @@ def kmp(string,pattern):
 	while(j<len(string)):
 		if(string[j]!=pattern[i]):
 			i=t[i]
-			
 			if(string[j]==pattern[i]):
-				j+=1
 				i+=1
-			else:
-				j+=1
 		else:
-			j+=1
 			i+=1
+		j+=1
 		if(i==len(pattern)):
 			flag=1
 			print("true true true,found at:%d"%(j-len(pattern)))
