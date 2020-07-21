@@ -30,7 +30,7 @@ def kmp(string,pattern):
 	print(t)
 	while(j<len(string)):
 		if(string[j]!=pattern[i]):
-			i=t[i]
+			i=t[i-1]
 			if(string[j]==pattern[i]):
 				i+=1
 		else:
