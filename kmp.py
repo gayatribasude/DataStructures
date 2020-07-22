@@ -7,16 +7,18 @@ Time = O(m)+O(n) (O(m) for table creation, O(n) for main traversal)
 """
 
 
-
+"""
+mine
 def table(pattern,t):
 	i=0
 	j=1
+	count=0
 	while(j<len(pattern)):
 		if(pattern[i]!=pattern[j]):
 			while(i>=0 and pattern[i]!=pattern[j]):
 				i=i-1
 			if(pattern[i]==pattern[j]):
-				i+=1
+				i=i+1
 			else:
 				i=0
 		else:	
@@ -24,6 +26,22 @@ def table(pattern,t):
 		print(i)
 		t[j]=i
 		j+=1
+"""
+def table(pattern,t):
+	i=0
+	j=1
+	while(j<len(pattern)):
+		if(pattern[i]==pattern[j]):
+			t[j]=i+1;
+			i+=1
+			j+=1
+		else:
+			if(i!=0):
+				i=0
+			else:
+				j+=1
+				
+	
 
 
 
@@ -60,6 +78,7 @@ def kmp(string,pattern):
 # [0, 0, 0]
 # true true true,found at:0
 # true true true,found at:3
+true true true,found at:9
 
 # pattern="anananananil"
 # string ="ananananananananananananil"
@@ -73,6 +92,11 @@ def kmp(string,pattern):
 # true true true,found at:0
 # true true true,found at:9
 # true true true,found at:12
+
+
+# pattern='abcdyyyyyyyabcabcabd'
+# string='abcdyyyyyyyabcabcabdabcdyyyyyyyabcabcabdabcdyyyyyyyabcabcabd'
+
 
 pattern=input("add pattern:")
 string=input("add string:")
