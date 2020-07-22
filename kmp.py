@@ -13,9 +13,15 @@ def table(pattern,t):
 	j=1
 	while(j<len(pattern)):
 		if(pattern[i]!=pattern[j]):
-			i=0
+			while(i>=0 and pattern[i]!=pattern[j]):
+				i=i-1
+			if(pattern[i]==pattern[j]):
+				i+=1
+			else:
+				i=0
 		else:	
 			i+=1
+		print(i)
 		t[j]=i
 		j+=1
 
@@ -46,15 +52,28 @@ def kmp(string,pattern):
 
 # pattern='dsgwadsgz'
 # string='adsgwadsxdsgwadsgz'
+# [0, 0, 0, 0, 0, 1, 2, 3, 0]
+# true true true,found at:9
 
 # pattern='gay'
 # string='gaygaytrigayatri'
+# [0, 0, 0]
+# true true true,found at:0
+# true true true,found at:3
 
 # pattern="anananananil"
 # string ="ananananananananananananil"
+# [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 0]
+# true true true,found at:14
+
 
 # pattern="aaba"
 # string="aabaacaadaabaaba"
+# [0, 1, 0, 1]
+# true true true,found at:0
+# true true true,found at:9
+# true true true,found at:12
+
 pattern=input("add pattern:")
 string=input("add string:")
 kmp(string,pattern)
